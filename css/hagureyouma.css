@@ -197,6 +197,7 @@ span.icon::before {
 
 /*ホームページ*/
 .home-title {
+    margin-top: 3rem;
     font-weight: normal;
     font-family: 'Press Start 2P', cursive;
 }
