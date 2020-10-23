@@ -329,6 +329,7 @@ table td {
 }
 
 .header {
+    min-width: 300px;
     position: relative;
     display: flex;
     flex-wrap: nowrap;
