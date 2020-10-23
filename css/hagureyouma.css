@@ -2,12 +2,12 @@
 :root {
     /*フォントサイズ*/
     --fs-base: 100%;
-    --fs-xxl: 2em;
-    --fs-xl: 1.5em;
-    --fs-l: 1.25em;
-    --fs-m: 1em;
-    --fs-s: 0.75em;
-    --fs-xs: 0.5em;
+    --fs-xxl: 2rem;
+    --fs-xl: 1.5rem;
+    --fs-l: 1.25rem;
+    --fs-m: 1rem;
+    --fs-s: 0.75rem;
+    --fs-xs: 0.5rem;
 
     /*カラー*/
     --c-bg: #9b9b9b;
@@ -16,7 +16,7 @@
     --c-text: #5d5d5d;
     --c-highlite: #fdfdfd;
     --c-alternate: #ededed;
-    --c-caution:#ff0000;
+    --c-caution: #ff0000;
     --c-a-link: var(--c-text);
     --c-a-visited: var(--c-bg);
     --c-a-hover: var(--c-text);
@@ -24,14 +24,24 @@
     --c-hr: var(--c-text);
 
     /*大きさ設定*/
-    --maincontainer-width: 732px;
+    --maincontainer-width: 750px;
     --illust-menu-width: 300px;
 }
 
+@media screen and (max-width:750px) {
+    :root {
+        --fs-base: 75%;
+    }
+}
+
 /*共通*/
-html {}
+html {
+    font-size: var(--fs-base);
+}
 
 body {
+    margin: 0;
+    font-size: var(--fs-m);
     background-color: var(--c-bg);
     color: var(--c-text);
 }
@@ -130,6 +140,7 @@ span.caution {
     color: var(--c-caution);
     margin-left: 0.2em;
 }
+
 a:link {
     color: var(--c-a-link);
 }
@@ -138,29 +149,18 @@ a:visited {
     color: var(--c-a-visited);
 }
 
-a:hover {
-}
+a:hover {}
 
 a:active {
     color: var(--c-a-active);
 }
 
-.area {
+a.area {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.maincontainer {
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--maincontainer-width);
-    padding: 1em;
-    border-radius: 1em;
-    background-color: var(--c-main);
 }
 
 hr {
@@ -245,8 +245,9 @@ hr {
     margin-right: 0.5em;
 }
 
-ol{}
-ol li{
+ol {}
+
+ol li {
     margin: 1em 0em 1em 0em;
 }
 
@@ -315,17 +316,29 @@ table td {
 }
 
 /*テンプレート*/
+.maincontainer {
+    margin: 0.5em auto auto;
+    max-width: var(--maincontainer-width);
+    padding: 1em;
+    border-radius: 1.5em;
+    background-color: var(--c-main);
+}
+
+.contents {
+    padding: 0.5em;
+}
+
 .header {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     background: var(--c-text);
     color: var(--c-highlite);
-    margin: 0.5em 0.5em 2em;
+    margin: 0.5em 0.5em 0.5em 0.5em;
     padding: 0.5em;
-    border-radius: 1em;
+    border-radius: 0.1em;
     border: dashed 2px var(--c-accent);
     box-shadow: 0 0 0 0.5em var(--c-text);
 }
@@ -350,6 +363,30 @@ table td {
     font-size: var(--fs-s);
     margin: 0;
     text-align: center;
+}
+
+@media screen and (max-width:750px) {
+
+    .maincontainer {
+        margin: 0;
+        padding: 0;
+        border-radius: 0.5em;
+    }
+
+    .header {}
+
+    .header h1 {
+        font-size: 3vw;        
+        margin: 0;
+    }
+
+    .header i {
+        font-size: 4vw;
+    }
+
+    .header p {
+        font-size: 1vw;
+    }
 }
 
 .footer {
