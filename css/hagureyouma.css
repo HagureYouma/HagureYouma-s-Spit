@@ -309,7 +309,6 @@ table td {
     padding: 0.25em 0.5em;
 }
 
-/*テンプレート*/
 .maincontainer {
     margin: 0.5em auto auto;
     max-width: var(--maincontainer-width);
@@ -331,7 +330,7 @@ table td {
     align-items: center;
     background: var(--c-text);
     color: var(--c-highlite);
-    margin: 0.5em 0.5em 0.5em 0.5em;
+    margin: 0.5em;
     padding: 0.5em;
     border-radius: 0.1em;
     border: dashed 2px var(--c-accent);
@@ -341,7 +340,7 @@ table td {
 .header i {
     font-size: var(--fs-xxl);
     color: var(--c-accent);
-    margin: 0.5em;
+    margin: 0 0.5em;
 }
 
 .header h1 {
@@ -349,8 +348,7 @@ table td {
     font-weight: normal;
     font-family: 'Press Start 2P', cursive;
     font-size: var(--fs-xl);
-    line-height: 2rem;
-    margin: 0.5rem 0 0 0;
+    margin: 0 0 0.25em; 0;
     text-align: center;
 }
 
@@ -368,15 +366,16 @@ table td {
         border-radius: 0.5em;
     }
 
-    .header {}
+    .header {
+        padding: 1vw;
+    }
 
     .header h1 {
         font-size: 3vw;        
-        margin: 0;
     }
 
     .header i {
-        font-size: 4vw;
+        font-size: 4vw;        
     }
 
     .header p {
