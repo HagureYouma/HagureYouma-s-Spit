@@ -28,12 +28,6 @@
     --illust-menu-width: 300px;
 }
 
-@media screen and (max-width:750px) {
-    :root {
-        --fs-base: 100%;
-    }
-}
-
 /*共通*/
 html {
     font-size: var(--fs-base);
